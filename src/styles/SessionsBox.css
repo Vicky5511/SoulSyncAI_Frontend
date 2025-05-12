@@ -1,0 +1,98 @@
+/* Container */
+.sessions {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-right: 2px solid #ccc;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-radius: 24px;
+  margin: 0 10px;
+  height: calc(100vh - 115px);
+
+}
+
+/* Input */
+.sessions input {
+  color: #333;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add New Session button */
+.create_session_btn {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(32,32,32,255); 
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.create_session_btn:hover {
+  background-color: rgba(124,202,63,255);
+}
+
+/* Session row */
+.session_bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Title button */
+.session_title_btn {
+  flex-basis: 100%;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Delete button */
+.session_delete_btn {
+  flex-basis: 20%;
+  margin-left: auto;
+  border: none;
+  background: #ddd9d9;
+  color: #fc3535;
+  font-size: 14px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.session_delete_btn:hover {
+  background-color: #999;
+}
+
+/* Active session highlight */
+.active {
+  background-color: #ffffff;
+  color: black !important;
+  font-weight: bold;
+}

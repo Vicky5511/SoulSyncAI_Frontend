@@ -1,0 +1,138 @@
+:root {
+    --custom-text-color: #ffffff;
+    --custom-bg-color: rgba(32, 32, 32, 1);
+    --custom-accent-color: #00bcd4;
+    --custom-btn-bg: #e91e63;
+    --custom-btn-bg-hover: #c2185b;
+  }
+  
+  .custom-navbar-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--custom-bg-color);
+    padding: 1rem 2rem;
+    display: flex;
+    height: 70px; /* set consistent height */
+    justify-content: center;
+    border-radius: 3rem;
+    margin: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    color: var(--custom-text-color);
+  }
+  
+  .custom-navbar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+  }
+  
+  .custom-navbar-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .custom-navbar-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .custom-navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .custom-navbar-links li {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--custom-text-color);
+    transition: color 0.3s;
+  }
+  
+  .custom-navbar-links li:hover {
+    color: var(--custom-accent-color);
+  }
+  
+  .custom-navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-left: auto;
+    gap: 1rem;
+  }
+  
+  .custom-navbar-user {
+    font-size: 0.9rem;
+  }
+  
+  .custom-navbar-logout-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--custom-btn-bg);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-navbar-logout-btn:hover {
+    background-color: var(--custom-btn-bg-hover);
+  }
+  /* ... keep your existing styles ... */
+
+.custom-navbar-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* MOBILE STYLES */
+  @media (max-width: 768px) {
+    .custom-navbar-container {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .custom-navbar-toggle {
+      display: block;
+      margin-left: auto;
+    }
+  
+    .custom-navbar-center {
+      display: none;
+      width: 100%;
+      order: 3;
+    }
+  
+    .custom-navbar-center.show {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .custom-navbar-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    .custom-navbar-right {
+      width: 100%;
+      justify-content: center;
+      order: 4;
+    }
+  
+    .custom-navbar-wrapper {
+      border-radius: 1rem;
+    }
+  }
+  

@@ -1,0 +1,80 @@
+
+
+  .post-form {
+    background-color: #242836;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    animation: slideDown 0.3s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .post-form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .post-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-form textarea {
+    background-color: #2f3545;
+    border: 1px solid #3a3f4b;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #e4e6eb;
+    resize: none;
+    min-height: 120px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .post-form textarea:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+  }
+  
+  .post-form textarea::placeholder {
+    color: #8a8d98;
+  }
+  
+  .post-form button {
+    align-self: flex-end;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .post-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+  }
+  
+  .post-form button:active {
+    transform: translateY(1px);
+  }
+  

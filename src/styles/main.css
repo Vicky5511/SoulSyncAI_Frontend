@@ -1,0 +1,12 @@
+/* src/styles/App.css */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 30px;
+    width: calc(100% - 250px);
+    background-color: #fff;
+  }

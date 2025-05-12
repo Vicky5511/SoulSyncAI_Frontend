@@ -1,0 +1,50 @@
+.comment-form {
+    margin-top: 15px;
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    background-color: #2f3545;
+    border: 1px solid #3a3f4b;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    color: #e4e6eb;
+    resize: none;
+    min-height: 80px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .comment-form textarea:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);
+  }
+  
+  .comment-form textarea::placeholder {
+    color: #8a8d98;
+  }
+  
+  .comment-form button {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    float: right;
+  }
+  
+  .comment-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3);
+  }
+  
+  .comment-form button:active {
+    transform: translateY(1px);
+  }
+  

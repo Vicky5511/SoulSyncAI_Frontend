@@ -1,0 +1,152 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: hsl(248, 39%, 14%);
+  color: #e0e0e0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.background-radial-gradient {
+  background-image:
+    radial-gradient(650px circle at 0% 0%,
+      #2a1454 15%,
+      #3b2068 35%,
+      #2e1a47 75%,
+      #1a1335 80%,
+      transparent 100%),
+    radial-gradient(1250px circle at 100% 100%,
+      #5c258d 15%,
+      #3a3a5d 35%,
+      #201b3a 75%,
+      #1a1335 80%,
+      transparent 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#radius-shape-1, #radius-shape-2 {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+#radius-shape-1 {
+  height: 220px;
+  width: 220px;
+  top: -60px;
+  left: -130px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #ad1fff 0%, #44006b 100%);
+  box-shadow: 0 0 30px 10px rgba(173, 31, 255, 0.4);
+  animation: floatShape 6s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+#radius-shape-2 {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  bottom: -60px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, #44006b 0%, #ad1fff 100%);
+  box-shadow: 0 0 30px 10px rgba(173, 31, 255, 0.4);
+  animation: floatShape 7s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(12px) translateX(8px);
+    opacity: 0.8;
+  }
+}
+
+.bg-glass {
+  background-color: hsla(255, 100%, 100%, 0.14) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  border-radius: 24px !important;
+  box-shadow:
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    0 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  background-color: rgba(255, 255, 255, 0.13);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.12);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  background-color: rgba(255, 255, 255, 0.22);
+  outline: none;
+  box-shadow: 0 0 8px 2px #ad1fff;
+  color: #fff;
+}
+
+button,
+.MDBBtn {
+  border-radius: 24px !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.4s, box-shadow 0.3s;
+}
+
+button:hover,
+.MDBBtn:hover {
+  box-shadow: 0 0 15px 3px #ad1fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #radius-shape-1, #radius-shape-2 {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(248, 39%, 14%);
+}
+::-webkit-scrollbar-thumb {
+  background: #5c258d;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ad1fff;
+}
+
+.custom-label-color .form-label {
+  color: #ffffff !important; /* override MDB default */
+}
+.custom-label-color input {
+  color: white !important;  /* Input text color (user value) */
+}
